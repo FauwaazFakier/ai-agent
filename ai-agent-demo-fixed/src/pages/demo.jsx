@@ -21,7 +21,7 @@ export default function AIAgentDemoPage() {
     setStatus('Uploading and processing...');
 
     try {
-      const res = await fetch('https://your-n8n-instance.com/webhook/start-demo', {
+      const res = await fetch(process.env.NEXT_PUBLIC_API_URL, {
         method: 'POST',
         body: formData
       });
